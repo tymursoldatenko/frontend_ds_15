@@ -1,6 +1,8 @@
 @import 'mixin';
 
 .header {
+    background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+    border-radius: 0px 0px 12px 12px;
 
     .header--special {
         background: #E7E7F2;
@@ -10,12 +12,28 @@
     .container {
 
         .background {
-            background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
-            border-radius: 0px 0px 12px 12px;
+
+            .background__picture--special {
+                position: absolute;
+                top: 0;
+                right: 49.03%;
+                // z-index: 80;
+            }
+
+            .background__picture--pramery {
+                position: absolute;
+                left: 573px;
+                top: 43%;
+                // z-index: 80;
+            }
 
             .header__top {
-                padding: 50px 60px;
-                @include flex(row, space-between, nowrap, baseline);
+                padding: 50px 60px 0;
+                // width: 100%;
+                @include flex(row, space-between, nowrap, flex-start);
+                // position: absolute;
+                // top: 0;
+                // left: 0;
 
 
                 .logo {
@@ -83,6 +101,7 @@
                     .menu {
                         font-size: 0;
                         @include flex(row,flex-end, nowrap, baseline);
+
                         .menu__item {
                             margin: 0 2.2%;
 
@@ -110,6 +129,84 @@
                     }
                 }
             }
+
+            .header__title {
+                
+                .title {
+                    // z-index: 100;
+                    @include gettextstyle(700, 38px, 46px, center, $colorBasic);
+                    position: absolute;
+                    width: 800px;
+                    margin-top: 377px;
+                    margin-left: 320px;
+                }
+            }
+
+            .button {
+                padding: 41.3% 48.5% 0;
+
+                .button__picture {
+                    position: absolute;
+                }
+                    
+                .button__picture--special {
+                    position: relative;
+                    margin: 17px 11px 14px;
+                }
+            }   
+
+            .dropdownmenu {
+                margin-top: 90px;
+                @include flex(row,flex-start,nowrap,flex-start);
+
+                .dropdownmenu__block {
+                    width: 31%;
+                    margin-left: 12.2%;
+                    padding-right: 4.1%;
+                    border-right:4px solid rgba(255, 255, 255, 0.3);
+
+                    .dropdownmenu__list {
+                        
+                        .dropdownmenu__name {
+                            @include gettextstyle (700, 38px, 46px, right, #B3B3BA);
+                            margin: 30px 0;
+
+                        }
+
+                        .dropdownmenu__name--active {
+                            background: linear-gradient(90.13deg, #EF8080 0.84%, $colorActive 99.96%);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            background-clip: text;
+                            margin-bottom: 30px;
+                        }
+                        
+                        .dropdownmenu__name--pramery {
+                            margin: 30px 0 10px 0;
+                        }
+
+                        .dropdownmenu__name:hover {
+                            color: $colorActive;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .dropdownmenu__copy {
+                    width: 55%;
+                    margin-left: 4.1%;
+
+                    .dropdownmenu__title {
+                        @include gettextstyle(700, 30px, 37px,start, $colorBasic); 
+                        margin: 43px 0 30px;
+                    }
+
+                    .dropdownmenu__text {
+                        @include gettextstyle (400, 19px, 30px, start, $colorBasic);
+                        width: 73.4%;
+                    }
+                }
+            }     
         }
     }
 }

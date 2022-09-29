@@ -1,0 +1,21 @@
+$colorActive: #F0145A;
+$colorBasic: #ffffff;
+
+
+
+@mixin flex($fd, $jc, $wr, $ai) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    flex-wrap: $wr;
+    align-items: $ai;
+}
+
+@mixin gettextstyle($fw, $fs, $lh, $ta, $c) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    text-align: $ta;
+    color: $c;
+}
+

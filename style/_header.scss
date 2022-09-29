@@ -1,24 +1,113 @@
+@import 'mixin';
+
 .header {
 
     .header--special {
         background: #E7E7F2;
         border-radius: 0px 0px 12px 12px;
     }
+
     .container {
 
         .background {
             background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
             border-radius: 0px 0px 12px 12px;
+
             .header__top {
+                padding: 50px 60px;
+                @include flex(row, space-between, nowrap, baseline);
 
-                .title {
 
-                    .logo {
+                .logo {
+                    @include flex(column, flex-start, nowrap, baseline);
+                }
 
-                        display: flex;
-                        flex-direction: column;
+                .nav {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px 0;
+
+                    .nav__block{
+                        @include flex(row, flex-end, nowrap, baseline);
+                        
+
+                        .nav__item {
+                            @include flex(row, flex-start, nowrap, baseline);
+
+                            .nav__link {
+                                @include gettextstyle(700, 12px, 15px, center, $colorBasic);
+                                letter-spacing: 1px;
+                                padding: 5px 7px;
+                                cursor: pointer;
+
+                                &:hover {
+                                    background: rgba(255, 255, 255, 0.2);
+                                    border-radius: 8px;
+                                }
+                            }
+
+                            .nav__link--active {
+                                background: $colorActive;
+                                border-radius: 8px;
+                            }
+                        }
+
+                        .list {
+                            @include flex(row,flex-start, nowrap, baseline);
+
+                            
+                            .list__item {
+                                @include gettextstyle(700, 16px, 20px, right, $colorBasic);
+                            }
+                            .list__item--special {
+                                @include gettextstyle(400, 16px, 20px, right, $colorBasic);
+                            }
+
+                            // .list__item--pramery  {
+                                
+                               
+
+                            //     width: 30px;
+                            //     height: 26px;
+                            //     background-color: #000;
+                            //     display: block;
+                            //     mask-image: url(../svg/Vector.svg);
+                               
+                            // }
+                        }
+
                     }
 
+
+                    .menu {
+                        font-size: 0;
+                        @include flex(row,flex-end, nowrap, baseline);
+                        .menu__item {
+                            margin: 0 2.2%;
+
+                            &:hover {
+                                border-bottom: 2px solid $colorBasic;
+                            }
+
+                            .menu__link {
+                                @include gettextstyle(700, 16px, 20px, right, $colorBasic);
+                                text-decoration: none;
+                            }
+                        }
+
+                        .menu__item--active {
+                            border-bottom: 2px solid $colorActive;
+
+                            .menu__link--active {
+                                color: $colorActive;
+                            }
+                        }
+
+                        .menu__item--special {
+                            margin: 0 0 0 2.2%;
+                        }
+                    }
                 }
             }
         }

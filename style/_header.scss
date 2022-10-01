@@ -3,11 +3,7 @@
 .header {
     background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
     border-radius: 0px 0px 12px 12px;
-
-    .header--special {
-        background: #E7E7F2;
-        border-radius: 0px 0px 12px 12px;
-    }
+    padding: 0 40px;
 
     .container {
 
@@ -16,25 +12,18 @@
             .background__picture--special {
                 position: absolute;
                 top: 0;
-                right: 49.03%;
-                // z-index: 80;
+                left: 411.63px;
             }
 
             .background__picture--pramery {
                 position: absolute;
-                left: 573px;
-                top: 43%;
-                // z-index: 80;
+                left: 613px;
+                top: 341px;
             }
 
             .header__top {
                 padding: 50px 60px 0;
-                // width: 100%;
                 @include flex(row, space-between, nowrap, flex-start);
-                // position: absolute;
-                // top: 0;
-                // left: 0;
-
 
                 .logo {
                     @include flex(column, flex-start, nowrap, baseline);
@@ -44,7 +33,7 @@
                     width: 50%;
                     display: flex;
                     flex-direction: column;
-                    gap: 16px 0;
+                    gap: 15px 0;
 
                     .nav__block{
                         @include flex(row, flex-end, nowrap, baseline);
@@ -52,14 +41,15 @@
 
                         .nav__item {
                             @include flex(row, flex-start, nowrap, baseline);
+                            align-self: flex-start;
 
                             .nav__link {
                                 @include gettextstyle(700, 12px, 15px, center, $colorBasic);
                                 letter-spacing: 1px;
                                 padding: 5px 7px;
-                                cursor: pointer;
-
+                                
                                 &:hover {
+                                    cursor: pointer;
                                     background: rgba(255, 255, 255, 0.2);
                                     border-radius: 8px;
                                 }
@@ -77,22 +67,16 @@
                             
                             .list__item {
                                 @include gettextstyle(700, 16px, 20px, right, $colorBasic);
+                                align-self: center;
+
                             }
                             .list__item--special {
                                 @include gettextstyle(400, 16px, 20px, right, $colorBasic);
                             }
 
-                            // .list__item--pramery  {
-                                
-                               
-
-                            //     width: 30px;
-                            //     height: 26px;
-                            //     background-color: #000;
-                            //     display: block;
-                            //     mask-image: url(../svg/Vector.svg);
-                               
-                            // }
+                            .list__link svg:hover #face {
+                                fill: rgb(209, 92, 92);
+                            }
                         }
 
                     }
@@ -103,7 +87,7 @@
                         @include flex(row,flex-end, nowrap, baseline);
 
                         .menu__item {
-                            margin: 0 2.2%;
+                            margin: 0 0 0 2.2%;
 
                             &:hover {
                                 border-bottom: 2px solid $colorBasic;
@@ -122,10 +106,6 @@
                                 color: $colorActive;
                             }
                         }
-
-                        .menu__item--special {
-                            margin: 0 0 0 2.2%;
-                        }
                     }
                 }
             }
@@ -133,17 +113,17 @@
             .header__title {
                 
                 .title {
-                    // z-index: 100;
                     @include gettextstyle(700, 38px, 46px, center, $colorBasic);
                     position: absolute;
                     width: 800px;
-                    margin-top: 377px;
-                    margin-left: 320px;
+                    top: 377px;
+                    left: 360px;
                 }
             }
 
             .button {
-                padding: 41.3% 48.5% 0;
+                margin: 614px auto 0;
+                width: 42px;
 
                 .button__picture {
                     position: absolute;
@@ -160,7 +140,7 @@
                 @include flex(row,flex-start,nowrap,flex-start);
 
                 .dropdownmenu__block {
-                    width: 31%;
+                    width: 32%;
                     margin-left: 12.2%;
                     padding-right: 4.1%;
                     border-right:4px solid rgba(255, 255, 255, 0.3);
@@ -178,7 +158,7 @@
                             -webkit-background-clip: text;
                             -webkit-text-fill-color: transparent;
                             background-clip: text;
-                            margin-bottom: 30px;
+                            margin: 10px  0 35px 0;
                         }
                         
                         .dropdownmenu__name--pramery {
@@ -206,7 +186,98 @@
                         width: 73.4%;
                     }
                 }
-            }     
+            }
         }
+            
+        .group {
+            padding: 60px 0 0 4.1%;
+
+            .way {
+                @include flex (row, flex-start, nowrap, baseline);
+                margin-bottom: 10px;
+
+                .way__name {
+                    @include gettextstyle (700, 14px, 17px, start, $colorSecondary);
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    margin-right: 5.5px;
+                }
+                
+                .way__name:hover + .way__logo svg #way_svg {
+                    stroke: $colorActive;
+                }
+
+                .way__name:hover {
+                    color: $colorActive;
+                }
+
+            }
+
+            .group__title {
+                @include gettextstyle(700, 38px, 46px, start, $colorBasic);
+                background: linear-gradient(90.13deg, $colorActive 0.84%, #EF8080 99.96%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            .group__item {
+                margin-top: 60px;
+                @include flex(column, flex-start, wrap, baseline);
+
+                .group__block {
+                    @include flex(row, flex-start, wrap, baseline);
+                    margin-bottom: 60px;
+
+                    .block {
+                        @include flex(column, flex-start, nowrap, baseline);
+                        margin-right: 60px;
+
+                        .block__baner {
+                            width: 92px;
+                            height: 92px;
+                            background: $colorBasic;
+                            border-radius: 24px;
+                            padding: 14px;
+                            margin-bottom: 30px;
+
+                        }
+
+                        .block__copy {
+                            width: 400px;
+
+                            .block__title {
+                                @include gettextstyle (700, 22px, 27px, start, $colorSecondary);
+                                margin-bottom: 15px;
+                            }
+
+                            .block__text {
+                                @include gettextstyle(400, 16px, 26px, start, $colorBasic);
+                            }
+                        }
+                    }
+
+                }
+
+                
+            }
+        }
+    
     }
+
 }
+.background--special {
+    width: 97.2%;
+    margin: 0 auto;
+    height: 10px;
+    background: #E7E7F2;
+    border-radius: 0px 0px 12px 12px;
+}
+.background--primary {
+    width: 94.4%;
+    margin: 0 auto;
+    height: 10px;
+    border-radius: 0px 0px 12px 12px;
+    background: #CACADB;
+}
+    

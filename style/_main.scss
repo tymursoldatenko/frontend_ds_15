@@ -1,0 +1,72 @@
+@import 'mixin';
+@import 'base';
+
+.main {
+
+    .slider {
+        padding: 60px 100px;
+        
+        .slider__container  {
+            background: #F5F5FA;
+            border-radius: 12px 0px 0px 12px;
+            
+            .slider__block {
+                @include flex (row, start, nowrap, start);
+
+                .slider__picture {
+                    width: 400px;
+                    border-radius: 12px 0px 0px 12px;
+                    height: 349px;
+                }
+                
+                .slider__copy {
+                    width: 69.67%;
+                    padding: 30px;
+
+                    .slider__text {
+                        @include gettextstyle(700, 16px, 20px, start, #B3B3BA);
+                        margin-top: 30px;
+                    }
+
+                    .slider__footer {
+                        @include gettextstyle(400, 14px, 22px, start, #B3B3BA);
+                        margin-top: 6px;
+                    }
+                }
+
+            }
+        }
+
+        #slider1 {
+            display: flex;
+        }
+        
+        #slider2,
+        #slider3 {
+            display: none;
+        }
+
+        .slider__button {
+            margin: 30px auto;
+            @include flex( row, center, nowrap, baseline);
+
+            .button {
+                width: 16px;
+                height: 16px;
+                background-color: $colorSecondary;
+                border-radius: 8px;
+                margin: 0 15px 0 0;
+                opacity: .2;
+                cursor: pointer;
+            }
+
+            .button--active {
+                opacity: 1;
+            }
+
+            .button--special {
+                margin: 0;
+            }
+        }
+    }
+}

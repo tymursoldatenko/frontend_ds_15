@@ -1,25 +1,27 @@
 @import 'mixin';
+@import 'base';
 
 .header {
     background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
     border-radius: 0px 0px 12px 12px;
     padding: 0 40px;
+    
+    .background__picture--special {
+        position: absolute;
+        top: 0;
+        left: calc(25.8% + 20px);
+    }
+
+    .background__picture--pramery {
+        position: absolute;
+        left: calc(39.792% + 7px);
+        top: 341px;
+    }
 
     .container {
 
         .background {
 
-            .background__picture--special {
-                position: absolute;
-                top: 0;
-                left: 411.63px;
-            }
-
-            .background__picture--pramery {
-                position: absolute;
-                left: 613px;
-                top: 341px;
-            }
 
             .header__top {
                 padding: 50px 60px 0;
@@ -111,14 +113,11 @@
             }
 
             .header__title {
-                
-                .title {
-                    @include gettextstyle(700, 38px, 46px, center, $colorBasic);
-                    position: absolute;
-                    width: 800px;
-                    top: 377px;
-                    left: 360px;
-                }
+                @include gettextstyle(700, 38px, 46px, center, $colorBasic);
+                position: absolute;
+                width: 800px;
+                top: 377px;
+                left: 360px;
             }
 
             .button {
@@ -192,35 +191,6 @@
         .group {
             padding: 60px 0 0 4.1%;
 
-            .way {
-                @include flex (row, flex-start, nowrap, baseline);
-                margin-bottom: 10px;
-
-                .way__name {
-                    @include gettextstyle (700, 14px, 17px, start, $colorSecondary);
-                    letter-spacing: 1px;
-                    text-transform: uppercase;
-                    margin-right: 5.5px;
-                }
-                
-                .way__name:hover + .way__logo svg #way_svg {
-                    stroke: $colorActive;
-                }
-
-                .way__name:hover {
-                    color: $colorActive;
-                }
-
-            }
-
-            .group__title {
-                @include gettextstyle(700, 38px, 46px, start, $colorBasic);
-                background: linear-gradient(90.13deg, $colorActive 0.84%, #EF8080 99.96%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-            }
-
             .group__item {
                 margin-top: 60px;
                 @include flex(column, flex-start, wrap, baseline);
@@ -280,4 +250,4 @@
     border-radius: 0px 0px 12px 12px;
     background: #CACADB;
 }
-    
+

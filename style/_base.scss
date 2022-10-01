@@ -5,3 +5,35 @@ body {
 h1 {
     font-size: 2rem;
 }
+
+
+.way {
+    @include flex (row, flex-start, nowrap, baseline);
+    margin-bottom: 10px;
+
+    .way__name {
+        @include gettextstyle (700, 14px, 17px, start, $colorSecondary);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-right: 5.5px;
+    }
+    
+    .way__name:hover + .way__logo svg #way_svg {
+        stroke: $colorActive;
+        cursor: pointer;
+    }
+
+    .way__name:hover {
+        color: $colorActive;
+        cursor: pointer;
+    }
+
+}
+
+.title {
+    @include gettextstyle(700, 38px, 46px, start, $colorBasic);
+    background: linear-gradient(90.13deg, $colorActive 0.84%, #EF8080 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

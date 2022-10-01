@@ -1,16 +1,110 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.way {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+.way .way__name {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: start;
+  color: #24A3FF;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-right: 5.5px;
+}
+.way .way__name:hover + .way__logo svg #way_svg {
+  stroke: #F0145A;
+  cursor: pointer;
+}
+.way .way__name:hover {
+  color: #F0145A;
+  cursor: pointer;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  text-align: start;
+  color: #ffffff;
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.way {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+.way .way__name {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: start;
+  color: #24A3FF;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-right: 5.5px;
+}
+.way .way__name:hover + .way__logo svg #way_svg {
+  stroke: #F0145A;
+  cursor: pointer;
+}
+.way .way__name:hover {
+  color: #F0145A;
+  cursor: pointer;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  text-align: start;
+  color: #ffffff;
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .header {
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
   border-radius: 0px 0px 12px 12px;
   padding: 0 40px;
 }
-.header .container .background .background__picture--special {
+.header .background__picture--special {
   position: absolute;
   top: 0;
-  left: 411.63px;
+  left: calc(25.8% + 20px);
 }
-.header .container .background .background__picture--pramery {
+.header .background__picture--pramery {
   position: absolute;
-  left: 613px;
+  left: calc(39.792% + 7px);
   top: 341px;
 }
 .header .container .background .header__top {
@@ -120,7 +214,7 @@
 .header .container .background .header__top .nav .menu .menu__item--active .menu__link--active {
   color: #F0145A;
 }
-.header .container .background .header__title .title {
+.header .container .background .header__title {
   font-weight: 700;
   font-size: 38px;
   line-height: 46px;
@@ -201,41 +295,6 @@
 .header .container .group {
   padding: 60px 0 0 4.1%;
 }
-.header .container .group .way {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  align-items: baseline;
-  margin-bottom: 10px;
-}
-.header .container .group .way .way__name {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 17px;
-  text-align: start;
-  color: #24A3FF;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-right: 5.5px;
-}
-.header .container .group .way .way__name:hover + .way__logo svg #way_svg {
-  stroke: #F0145A;
-}
-.header .container .group .way .way__name:hover {
-  color: #F0145A;
-}
-.header .container .group .group__title {
-  font-weight: 700;
-  font-size: 38px;
-  line-height: 46px;
-  text-align: start;
-  color: #ffffff;
-  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
 .header .container .group .group__item {
   margin-top: 60px;
   display: flex;
@@ -309,4 +368,113 @@ body {
 
 h1 {
   font-size: 2rem;
+}
+
+.way {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+.way .way__name {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: start;
+  color: #24A3FF;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-right: 5.5px;
+}
+.way .way__name:hover + .way__logo svg #way_svg {
+  stroke: #F0145A;
+  cursor: pointer;
+}
+.way .way__name:hover {
+  color: #F0145A;
+  cursor: pointer;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  text-align: start;
+  color: #ffffff;
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.main .slider {
+  padding: 60px 100px;
+}
+.main .slider .slider__container {
+  background: #F5F5FA;
+  border-radius: 12px 0px 0px 12px;
+}
+.main .slider .slider__container .slider__block {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  flex-wrap: nowrap;
+  align-items: start;
+}
+.main .slider .slider__container .slider__block .slider__picture {
+  width: 400px;
+  border-radius: 12px 0px 0px 12px;
+  height: 349px;
+}
+.main .slider .slider__container .slider__block .slider__copy {
+  width: 69.67%;
+  padding: 30px;
+}
+.main .slider .slider__container .slider__block .slider__copy .slider__text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: start;
+  color: #B3B3BA;
+  margin-top: 30px;
+}
+.main .slider .slider__container .slider__block .slider__copy .slider__footer {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: start;
+  color: #B3B3BA;
+  margin-top: 6px;
+}
+.main .slider #slider1 {
+  display: flex;
+}
+.main .slider #slider2,
+.main .slider #slider3 {
+  display: none;
+}
+.main .slider .slider__button {
+  margin: 30px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: baseline;
+}
+.main .slider .slider__button .button {
+  width: 16px;
+  height: 16px;
+  background-color: #24A3FF;
+  border-radius: 8px;
+  margin: 0 15px 0 0;
+  opacity: 0.2;
+  cursor: pointer;
+}
+.main .slider .slider__button .button--active {
+  opacity: 1;
+}
+.main .slider .slider__button .button--special {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */

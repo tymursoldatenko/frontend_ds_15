@@ -13,10 +13,10 @@
 </head>
 <body>
     <header class="header">
+        <img src="svg/palka.svg" alt="h" class="background__picture--special">
+        <img src="svg/duga.svg" alt="h" class="background__picture--pramery">
         <div class="container">
             <div class="background">
-                <img src="svg/palka.svg" alt="h" class="background__picture--special">
-                <img src="svg/duga.svg" alt="h" class="background__picture--pramery">
                 <div class="header__top">
                     <div class="logo">
                             <img src="svg/title.svg" alt="">
@@ -82,11 +82,9 @@
                         </ul>
                     </div>
                 </div>
-                <div class="header__title">
-                    <h1 class="title">
-                        you legal solutions provider
-                    </h1>
-                </div>
+                <h1 class="header__title">
+                    you legal solutions provider
+                </h1>
                 <div class="button">
                     <img src="svg/kryg.svg" alt="" class="button__picture">
                     <img src="svg/galochka.svg" alt="" class="button__picture--special">
@@ -129,7 +127,7 @@
                         </svg>                        
                     </div>
                 </div>
-                <div class="group__title">
+                <div class="title">
                     What can we do better than others?
                 </div>
                 <div class="group__item">
@@ -223,8 +221,95 @@
     <div class="background--special"></div>
     <div class="background--primary"></div>
 
-    main.main>(div.-special>(div.-item>div.-copy>(div.-picture>img.-pucture)+div.-copy)+(div.item>div.-title+div.-baner>div.-picture*12>img.-picture--special))+(dic.-item>div.-title+div.-block>div.-item*3>div.-picture+div.-copy>div.-title+div.text)|bem
+    <main class="main">
+        <div class="slider">
+            <div id="slider1" class="slider__container">
+                <div class="slider__block">
+                    <img src="img/teamfirst.png" alt="" class="slider__picture">
+                    <div class="slider__copy">
+                        <div class="way">
+                            <div class="way__name">
+                                команда
+                            </div>
+                            <div class="way__logo">
+                                <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path id="way_svg" d="M1.5 1L6 5.5L1.5 10" stroke="#24A3FF" stroke-width="2"/>
+                                </svg>                        
+                            </div>
+                        </div>
+                        <div class="title">
+                            Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
+                        </div>
+                        <div class="slider__text">
+                            Олександр Олександровський
+                        </div>
+                        <div class="slider__footer">
+                            Керуючий партнер
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="slider2" class="slider__container">
+                <div class="slider__block">
+                    <img src="img/teamsecond.png" alt="" class="slider__picture">
+                    <div class="slider__copy">
+                        <div class="way">
+                            <div class="way__name">
+                                команда
+                            </div>
+                            <div class="way__logo">
+                                <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path id="way_svg" d="M1.5 1L6 5.5L1.5 10" stroke="#24A3FF" stroke-width="2"/>
+                                </svg>                        
+                            </div>
+                        </div>
+                        <div class="title">
+                            Блааааааааааааа Блааааааааааааа Блааааааааааааа Блааааааааааааа Блааааааааааааа Блааааааааааааа Блааааааааааааа Блааааааааааааа
+                        </div>
+                        <div class="slider__text">
+                            Лена Головач
+                        </div>
+                        <div class="slider__footer">
+                            Партнер
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="slider3" class="slider__container">
+                <div class="slider__block">
+                    <img src="img/teamthird.png" alt="" class="slider__picture">
+                    <div class="slider__copy">
+                        <div class="way">
+                            <div class="way__name">
+                                команда
+                            </div>
+                            <div class="way__logo">
+                                <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path id="way_svg" d="M1.5 1L6 5.5L1.5 10" stroke="#24A3FF" stroke-width="2"/>
+                                </svg>                        
+                            </div>
+                        </div>
+                        <div class="title">
+                            Блааааааааааааа Блааааааааааааа Блааааааааааааа Блааааааааааааа Блааааааааааааа Блааааааааааааа  
+                        </div>
+                        <div class="slider__text">
+                            Ирина Шевчук
+                        </div>
+                        <div class="slider__footer">
+                            Партнер
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider__button">
+                <div id="button" class="button button--active"></div>
+                <div id="button1" class="button"></div>
+                <div id="button2" class="button button--special"></div>
+            </div>
+        </div>
+    </main>
 
     footer.footer>div.-item*3|bem
+    <script src="js/main.js"></script>
 </body>
 </html>

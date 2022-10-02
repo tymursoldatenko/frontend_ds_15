@@ -47,5 +47,40 @@ button3.addEventListener('click', function () {
     slider1.style.display = "none";
 });
 
+let circle = document.getElementById('circle');
+let circle1 = document.getElementById('circle__circle');
+let galochka = document.getElementById('galochka');
+let galochka1 = document.getElementById('galochka__galochka');
+let dropdownmenu = document.getElementById('dropdownmenu');
 
+console.log('circle');
+console.log('circle__circle');
+console.log('galochka');
+console.log('galochka__galochka');
+console.log('dropdownmenu');
 
+circle.addEventListener('click', function() {
+    if (dropdownmenu.style.display === "flex") {
+        dropdownmenu.style.display = "none";
+        circle1.style.stroke = "white";
+        galochka1.style.stroke = "white";
+    }
+    else {
+        dropdownmenu.style.display = "flex";
+        circle1.style.stroke = "#F0145A";
+        galochka1.style.stroke = "#F0145A";
+    }
+});
+
+galochka.addEventListener('click', function() {
+    if (dropdownmenu.style.display === "flex") {
+        dropdownmenu.style.display = "none";
+        circle1.style.stroke = "white";
+        galochka1.style.stroke = "white";
+    }
+    else {
+        dropdownmenu.style.display = "flex";
+        circle1.style.stroke = "#F0145A";
+        galochka1.style.stroke = "#F0145A";
+    }
+});

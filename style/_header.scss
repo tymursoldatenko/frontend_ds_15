@@ -35,7 +35,7 @@
                     width: 50%;
                     display: flex;
                     flex-direction: column;
-                    gap: 15px 0;
+                    gap: 12px 0;
 
                     .nav__block{
                         @include flex(row, flex-end, nowrap, baseline);
@@ -68,16 +68,54 @@
 
                             
                             .list__item {
-                                @include gettextstyle(700, 16px, 20px, right, $colorBasic);
+                                @include gettextstyle(700, 16px, 20px, start, $colorBasic);
                                 align-self: center;
-
+                                margin-left: 18px;
+                                position: relative;
                             }
+
+                            .list__item--special::before{
+                                content: '';
+                                position: absolute;
+                                top: 7px;
+                                left: -12px;
+                                background-color:#B3B3BA;
+                                border: 2px solid #B3B3BA;
+                                height: 2px;
+                                width: 2px;
+                                border-radius: 50%;
+                            }
+
+                            .list__item::before{
+                                content: '';
+                                position: absolute;
+                                top: 7px;
+                                left: -12px;
+                                background-color:#B3B3BA;
+                                border: 2px solid #B3B3BA;
+                                height: 2px;
+                                width: 2px;
+                                border-radius: 50%;
+                            }
+
+                            .list__item--primary::before{
+                                content: '';
+                                position: absolute;
+                                top: 11px;
+                                left: -12px;
+                                background-color:#B3B3BA;
+                                border: 2px solid #B3B3BA;
+                                height: 2px;
+                                width: 2px;
+                                border-radius: 50%;
+                            }
+
                             .list__item--special {
                                 @include gettextstyle(400, 16px, 20px, right, $colorBasic);
                             }
 
                             .list__link svg:hover #face {
-                                fill: rgb(209, 92, 92);
+                                fill: $colorActive;
                             }
                         }
 
@@ -124,19 +162,32 @@
                 margin: 614px auto 0;
                 width: 42px;
 
-                .button__picture {
+                .button__circle {
                     position: absolute;
                 }
                     
-                .button__picture--special {
+                .button__galochka {
+                    width: 20px;
                     position: relative;
-                    margin: 17px 11px 14px;
+                    top: 15px;
+                    left: 11px;
                 }
+
+                .button__circle svg:hover #circle__circle,
+                .button__circle svg:hover #galochka__galochka,
+                .button__galochka svg:hover #galochka__galochka,
+                .button__galochka svg:hover #circle__circle {
+                    stroke: $colorActive;
+                } 
             }   
 
             .dropdownmenu {
                 margin-top: 90px;
-                @include flex(row,flex-start,nowrap,flex-start);
+                display: none;
+                flex-direction: row;
+                justify-content: flex-start;
+                flex-wrap: nowrap;
+                align-items: flex-start;
 
                 .dropdownmenu__block {
                     width: 32%;

@@ -126,7 +126,7 @@ h1 {
   width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 15px 0;
+  gap: 12px 0;
 }
 .header .container .background .header__top .nav .nav__block {
   display: flex;
@@ -172,9 +172,44 @@ h1 {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  text-align: right;
+  text-align: start;
   color: #ffffff;
   align-self: center;
+  margin-left: 18px;
+  position: relative;
+}
+.header .container .background .header__top .nav .nav__block .list .list__item--special::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -12px;
+  background-color: #B3B3BA;
+  border: 2px solid #B3B3BA;
+  height: 2px;
+  width: 2px;
+  border-radius: 50%;
+}
+.header .container .background .header__top .nav .nav__block .list .list__item::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -12px;
+  background-color: #B3B3BA;
+  border: 2px solid #B3B3BA;
+  height: 2px;
+  width: 2px;
+  border-radius: 50%;
+}
+.header .container .background .header__top .nav .nav__block .list .list__item--primary::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: -12px;
+  background-color: #B3B3BA;
+  border: 2px solid #B3B3BA;
+  height: 2px;
+  width: 2px;
+  border-radius: 50%;
 }
 .header .container .background .header__top .nav .nav__block .list .list__item--special {
   font-weight: 400;
@@ -184,7 +219,7 @@ h1 {
   color: #ffffff;
 }
 .header .container .background .header__top .nav .nav__block .list .list__link svg:hover #face {
-  fill: rgb(209, 92, 92);
+  fill: #F0145A;
 }
 .header .container .background .header__top .nav .menu {
   font-size: 0;
@@ -229,16 +264,24 @@ h1 {
   margin: 614px auto 0;
   width: 42px;
 }
-.header .container .background .button .button__picture {
+.header .container .background .button .button__circle {
   position: absolute;
 }
-.header .container .background .button .button__picture--special {
+.header .container .background .button .button__galochka {
+  width: 20px;
   position: relative;
-  margin: 17px 11px 14px;
+  top: 15px;
+  left: 11px;
+}
+.header .container .background .button .button__circle svg:hover #circle__circle,
+.header .container .background .button .button__circle svg:hover #galochka__galochka,
+.header .container .background .button .button__galochka svg:hover #galochka__galochka,
+.header .container .background .button .button__galochka svg:hover #circle__circle {
+  stroke: #F0145A;
 }
 .header .container .background .dropdownmenu {
   margin-top: 90px;
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: nowrap;

@@ -1,0 +1,119 @@
+.footer {
+    background: #F5F5FA;
+    padding: 30px 60px 0;
+
+    .footer__container {
+        border-top: 2px solid #E6E6F0;
+        padding-top: 30px;
+        @include flex (row, space-between, nowrap, start);
+
+        .footer__contac {
+
+            .footer__item {
+                margin: 0 0 30px 0;
+
+                .footer__list {
+                    font-size: 0;
+                    @include flex (row, start, nowrap, center);
+
+                    .footer__name {
+                        @include gettextstyle (400, 16px, 20px, start, #323264);
+                    }
+
+                    .footer__name--special {
+                        position: relative;
+                        margin-left: 26px;
+
+                        .footer__link {
+                            @include gettextstyle (700, 12px, 15px, start, $colorSecondary);
+                            letter-spacing: 1px;
+                            text-transform: uppercase;
+                            text-decoration: none;
+
+                            &:hover {
+                                color: $colorActive;
+                            }
+                        }
+                    }
+
+                    .footer__name--special .footer__link::before{
+                        content: '';
+                        position: absolute;
+                        top: 7px;
+                        left: -15px;
+                        background-color:#B3B3BA;
+                        border: 2px solid #B3B3BA;
+                        height: 2px;
+                        width: 2px;
+                        border-radius: 50%;
+
+                       
+                    }
+
+                    .footer__name--secondary {
+
+                        .footer__face {
+                            text-decoration: none;
+                        }
+                    }
+
+                    .footer__name--secondary svg:hover #footer__face {
+                        fill: $colorActive;
+                    }
+
+                    .footer__name--additional {
+                        @include gettextstyle (700, 16px, 20px, right, #46466E);
+                        margin-left: 26px;
+                        position: relative;
+                        
+                    }
+
+                    .footer__name--additional::before{
+                        content: '';
+                        position: absolute;
+                        top: 7px;
+                        left: -15px;
+                        background-color:#B3B3BA;
+                        border: 2px solid #B3B3BA;
+                        height: 2px;
+                        width: 2px;
+                        border-radius: 50%;
+                    }
+
+                    .footer__name--extra {
+                        margin-left: 26px;
+                        position: relative;
+
+
+
+                        .footer__link {
+                            @include gettextstyle (700, 16px, 20px, right, $colorSecondary);
+                            text-decoration: none;
+
+                            &:hover {
+                                color: $colorActive;
+                            }
+                        }
+                    }
+
+                    .footer__name--extra .footer__link::before{
+                        content: '';
+                        position: absolute;
+                        top: 7px;
+                        left: -15px;
+                        background-color:#B3B3BA;
+                        border: 2px solid #B3B3BA;
+                        height: 2px;
+                        width: 2px;
+                        border-radius: 50%;                       
+                    }
+                }
+            }
+        }
+
+        .footer__contac--special {
+            @include gettextstyle (400, 16px, 20px, right, #B3B3BA);
+        }
+    }
+
+}

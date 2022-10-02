@@ -4,7 +4,7 @@
 .main {
 
     .slider {
-        padding: 60px 100px;
+        padding: 60px 100px 30px 100px;
         
         .slider__container  {
             background: #F5F5FA;
@@ -40,7 +40,7 @@
         #slider1 {
             display: flex;
         }
-        
+
         #slider2,
         #slider3 {
             display: none;
@@ -67,6 +67,140 @@
             .button--special {
                 margin: 0;
             }
+        }
+    }
+
+    .baner {
+
+        .baner__title {
+            @include gettextstyle (700, 14px, 17px, center, #323264);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .baner__block {
+            width: 100%;
+            margin: 30px 40px 0;
+            @include flex (row, start, wrap, start);
+
+            .baner__item {
+                @include flex (row, center, nowrap, center);
+                width: 360px;
+                height: 120px;
+            }
+
+            .baner__item--special {
+                background: #1C4280;
+            }
+
+            .baner__item--primary {
+                background: #143646;
+            }
+
+            .baner__item--additional {
+                background: linear-gradient(0deg, #F48B30, #F48B30), #F48B30;
+            }
+        
+            .baner__item--extra {
+                background: #9E4DC3;
+            }
+
+            .baner__item--supplementaru {
+                background: #FD9339;
+            }
+
+            .baner__item--secondary {
+                background: #E2E2E4;
+            }
+
+            .baner__item--peculiar {
+                background: #C71C36;
+            }
+
+            .baner__item--unique {
+                background: #DCF3F9;
+            }
+
+            .baner__item--extraordinary {
+                background: #EAEAEA;
+            }
+
+            .baner__item--specific {
+                background: #282240;
+            }
+
+            .baner__item--particular {
+                background: #1D4568;
+            }
+
+            .baner__item--exceptional {
+                background: #000000;
+            }
+        }
+    }
+
+    .block {
+        background: #F5F5FA;
+        padding-top: 30px;
+        
+        .block__container {
+            width: 91.667%;
+            margin: 0 auto;
+
+            .block__item {
+                margin-top: 30px;
+                @include flex (row, start, nowrap, start);
+
+                .card {
+                    @include flex(column, start, nowrap, start);
+                    width: 31.82%;
+                    margin: 0 30px 0 0;
+                    background-color: $colorBasic;
+
+                    .card__picture {
+                        width: 100%;
+                        height: 200px;
+                    }
+
+                    .card__copy {
+                        padding: 30px 30px 70px;
+                        
+                        .card__text {
+                            border-bottom: 4px solid #E6E6F0;
+                            
+                            .card__title {
+                                @include gettextstyle (700, 16px, 20px, start, $colorSecondary);
+                                margin: 0 0 15px 0;
+                            }
+                            
+                            .card__data {
+                                @include gettextstyle (700, 12px, 15px, start, #B3B3BA);
+                                margin: 0 0 15px 0;
+                                letter-spacing: 1px;
+                                text-transform: uppercase;
+                            }
+                        }
+                        
+                        .card__footer {
+                            @include gettextstyle (400, 14px, 22px, start, #000000);
+                            margin: 15px 0 0 0;
+                        }
+                    }
+
+                    .card__copy--extra {
+                            padding: 30px 30px 30px;
+                    }
+
+                    .card__copy--special {
+                            padding: 30px 30px 48px;
+                    }
+                }
+
+                .card--special {
+                    margin: 0;
+                }
+            }
+
         }
     }
 }

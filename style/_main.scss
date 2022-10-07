@@ -14,6 +14,9 @@
                 @include flex (row, start, nowrap, start);
 
                 .slider__picture {
+                    @media screen and (min-width: $desktophd) {
+                        height: 298px;
+                    }
                     width: 400px;
                     border-radius: 12px 0px 0px 12px;
                     height: 349px;
@@ -79,8 +82,8 @@
         }
 
         .baner__block {
-            width: 100%;
-            margin: 30px 40px 0;
+            width: 94.8%;
+            margin: 30px auto 0;
             @include flex (row, start, wrap, start);
 
             .baner__item {
@@ -141,7 +144,7 @@
 
     .block {
         background: #F5F5FA;
-        padding-top: 30px;
+        padding: 30px 40px 0;
         
         .block__container {
             width: 91.667%;

@@ -4,41 +4,111 @@
 .header {
     background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
     border-radius: 0px 0px 12px 12px;
-    padding: 0 40px;
-    
-    .background__picture--special {
-        position: absolute;
-        top: 0;
-        left: calc(25.8% + 20px);
+
+    @media screen and (min-width: $mobile) {
+        
     }
 
-    .background__picture--pramery {
-        position: absolute;
-        left: calc(39.792% + 7px);
-        top: 341px;
+    @media screen and (min-width: $tabletsd) {
+        
     }
+
+    @media screen and (min-width: $tablet) {
+        padding: 0 40px;
+    }
+
+    @media screen and (min-width: $desktopsd) {
+        
+    }
+
+    @media screen and (min-width: $desktop) {
+        
+    }
+
+    @media screen and (min-width: $desktophd) {
+        padding: 0 160px;
+    }
+    
+
+    .background__picture {
+        position: absolute;
+        
+        @media screen and (min-width: $mobile) {
+
+        }
+
+        @media screen and (min-width: $tabletsd) {
+
+        }
+
+        @media screen and (min-width: $tablet) {
+
+        }
+
+        @media screen and (min-width: $desktopsd) {
+
+        }
+
+        @media screen and (min-width: $desktop) {
+            zoom: 1;
+            padding: 0 0 0 24.5%;
+        }
+
+        @media screen and (min-width: $desktophd) {
+            zoom: 1.25;
+            padding: 0 0 0 285px;
+        }
+        
+        .background__picture--special {
+            position: relative;
+            top: 0;
+        }
+    
+        .background__picture--pramery {
+            position: relative;
+            left: -159px;
+        }
+    }
+    
 
     .container {
-
+        
         .background {
-
-
+            
+            
             .header__top {
-                padding: 50px 60px 0;
-                @include flex(row, space-between, nowrap, flex-start);
 
+                @media screen and (min-width: $desktophd) {
+                    padding: 50px 30px 0 0;
+                }
+
+                @media screen and (min-width: $desktop) and (max-width:1919.9px) {
+                    padding: 50px 60px 0;
+                }
+
+                
+                @include flex(row, start, nowrap, flex-start);
+                
                 .logo {
                     @include flex(column, flex-start, nowrap, baseline);
                 }
-
+                
                 .nav {
-                    width: 50%;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 12px 0;
+                    position: absolute;
+
+                    @media screen and (min-width: $desktophd) {
+                        width: 83.2%;
+                    }
+
+                    @media screen and (min-width: $desktop) and (max-width:1919.9px) {
+                        width: 86.9%;
+        
+                    }
+                    
 
                     .nav__block{
                         @include flex(row, flex-end, nowrap, baseline);
+                        margin-bottom: 12px;
                         
 
                         .nav__item {
@@ -127,7 +197,7 @@
                         @include flex(row,flex-end, nowrap, baseline);
 
                         .menu__item {
-                            margin: 0 0 0 2.2%;
+                            margin: 0 0 0 1.2%;
 
                             &:hover {
                                 border-bottom: 2px solid $colorBasic;
@@ -154,12 +224,21 @@
                 @include gettextstyle(700, 38px, 46px, center, $colorBasic);
                 position: absolute;
                 width: 800px;
-                top: 377px;
-                left: 360px;
+
+                @media screen and (min-width: $desktophd) {
+                    top: 472px;
+                    left: 550px;
+                }
+                // top: 377px;
+                // left: 360px;
             }
 
             .button {
-                margin: 614px auto 0;
+
+                @media screen and (min-width: $desktophd) {
+                    margin: 812px auto 0;
+                }
+                // margin: 614px auto 0;
                 width: 42px;
 
                 .button__circle {
@@ -182,7 +261,7 @@
             }   
 
             .dropdownmenu {
-                margin-top: 90px;
+                margin-top: 120px;
                 display: none;
                 flex-direction: row;
                 justify-content: flex-start;
@@ -190,6 +269,9 @@
                 align-items: flex-start;
 
                 .dropdownmenu__block {
+                    @media screen and (min-width: $desktophd) {
+                        margin-left: 3%;
+                    }
                     width: 32%;
                     margin-left: 12.2%;
                     padding-right: 4.1%;
@@ -209,6 +291,10 @@
                             -webkit-text-fill-color: transparent;
                             background-clip: text;
                             margin: 10px  0 35px 0;
+
+                            @media screen and (min-width: $desktophd) {
+                                margin: 0;
+                            }
                         }
                         
                         .dropdownmenu__name--pramery {
@@ -228,11 +314,18 @@
 
                     .dropdownmenu__title {
                         @include gettextstyle(700, 30px, 37px,start, $colorBasic); 
+
+                        @media screen and (min-width: $desktophd) {
+                            margin: 60px 0 30px;
+                        }
                         margin: 43px 0 30px;
                     }
 
                     .dropdownmenu__text {
                         @include gettextstyle (400, 19px, 30px, start, $colorBasic);
+                        @media screen and (min-width: $desktophd) {
+                            width: auto;
+                        }
                         width: 73.4%;
                     }
                 }
@@ -240,6 +333,9 @@
         }
             
         .group {
+            @media screen and (min-width: $desktophd) {
+                padding: 60px 0 0 0;
+            }
             padding: 60px 0 0 4.1%;
 
             .group__item {
@@ -253,6 +349,9 @@
                     .block {
                         @include flex(column, flex-start, nowrap, baseline);
                         margin-right: 60px;
+                        // @media screen and (min-width: $desktophd) {
+                        //     margin-right: 50px;
+                        // }
 
                         .block__baner {
                             width: 92px;
@@ -265,6 +364,9 @@
                         }
 
                         .block__copy {
+                            @media screen and (min-width: $desktophd) {
+                                width: 460px;
+                            }
                             width: 400px;
 
                             .block__title {
@@ -288,14 +390,61 @@
 
 }
 .background--special {
-    width: 97.2%;
+    
+    @media screen and (min-width: $mobile) {
+        
+    }
+
+    @media screen and (min-width: $tabletsd) {
+        
+    }
+
+    @media screen and (min-width: $tablet) {
+        
+    }
+
+    @media screen and (min-width: $desktopsd) {
+        
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 97.2%;
+    }
+
+    @media screen and (min-width: $desktophd) {
+        width: 98%;
+    }
+    
     margin: 0 auto;
     height: 10px;
     background: #E7E7F2;
     border-radius: 0px 0px 12px 12px;
 }
 .background--primary {
-    width: 94.4%;
+
+    @media screen and (min-width: $mobile) {
+        
+    }
+
+    @media screen and (min-width: $tabletsd) {
+        
+    }
+
+    @media screen and (min-width: $tablet) {
+        
+    }
+
+    @media screen and (min-width: $desktopsd) {
+        width: 93.6%;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 94.4%;
+    }
+
+    @media screen and (min-width: $desktophd) {
+        width: 95.2%;
+    }
     margin: 0 auto;
     height: 10px;
     border-radius: 0px 0px 12px 12px;

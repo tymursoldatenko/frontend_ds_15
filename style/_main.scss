@@ -4,17 +4,73 @@
 .main {
 
     .slider {
-        padding: 60px 100px 30px 100px;
+        // @media screen and (min-width: $desktop) {
+        //     padding: 60px 60px 30px 60px;
+        // }
+        @media screen and (min-width: $mobile_375) {
+            padding: 0;
+        }
+        @media screen and (min-width: $tabletsd_768) {
+        }
+        @media screen and (min-width: $tablet_1024) {
+            padding: 60px 100px 30px 100px;
+        }
+        @media screen and (min-width: $desktopsd_1280) {
+        }
+        @media screen and (min-width: $desktop_1440) {
+        }
+        @media screen and (min-width: $desktophd_1920) {
+        }
+        
+        
         
         .slider__container  {
             background: #F5F5FA;
             border-radius: 12px 0px 0px 12px;
             
             .slider__block {
-                @include flex (row, start, nowrap, start);
+                @media screen and (min-width: $mobile_375) {
+                    @include flex (column, start, nowrap, start);
+                }
+                @media screen and (min-width: $tabletsd_768) {
+                }
+                @media screen and (min-width: $tablet_1024) {
+                    @include flex (row, start, nowrap, start);
+                }
+                @media screen and (min-width: $desktopsd_1280) {
+                }
+                @media screen and (min-width: $desktop_1440) {
+                }
+                @media screen and (min-width: $desktophd_1920) {
+                }
+                // @include flex (row, start, nowrap, start);
 
                 .slider__picture {
-                    @media screen and (min-width: $desktophd) {
+                    // @media screen and (min-width: $desktophd) {
+                    //     height: 298px;
+                    // }
+                    @media screen and (min-width: $mobile_375) {
+                        width: 315px;
+                        height: 500px;
+                    }
+                    @media screen and (min-width: $tabletsd_768) {
+                        width: 648px;
+                        height: 500px;
+                    }
+                    @media screen and (min-width: $tablet_1024) {
+                        width: 400px;
+                        height: 528px;
+                    }
+                    @media screen and (min-width: $desktopsd_1280) {
+                        width: 400px;
+                        height: 344px;
+                    }
+                    @media screen and (min-width: $desktop_1440) {
+                        width: 400px;
+                        height: 344px;
+                    }
+                    @media screen and (min-width: $desktophd_1920) {
+                        width: 400px;
                         height: 298px;
                     }
                     width: 400px;
@@ -75,6 +131,10 @@
 
     .baner {
 
+        &--special {
+            margin: 60px 0 0;
+        }
+
         .baner__title {
             @include gettextstyle (700, 14px, 17px, center, #323264);
             text-transform: uppercase;
@@ -82,11 +142,19 @@
         }
 
         .baner__block {
+            // @media screen and (min-width: $desktop) {
+            //    margin: 30px auto 0;
+            //    width: 100%;
+            // }
             width: 94.8%;
             margin: 30px auto 0;
             @include flex (row, start, wrap, start);
 
             .baner__item {
+                
+                // @media screen and (min-width: $desktop) {
+                //     width: 355px;
+                // }
                 @include flex (row, center, nowrap, center);
                 width: 360px;
                 height: 120px;
@@ -144,15 +212,32 @@
 
     .block {
         background: #F5F5FA;
-        padding: 30px 40px 0;
+        padding: 30px 60px 0;
         
         .block__container {
-            width: 91.667%;
+            
+        // @media screen and (min-width: $desktop) {
+        //     width: auto;
+        // }
             margin: 0 auto;
 
             .block__item {
                 margin-top: 30px;
-                @include flex (row, start, nowrap, start);
+                // @include flex (row, start, nowrap, start);
+                @media screen and (min-width: $mobile_375) {
+                    @include flex (row, start, wrap, start);
+                }
+                @media screen and (min-width: $tabletsd_768) {
+                }
+                @media screen and (min-width: $tablet_1024) {
+                    @include flex (row, start, nowrap, start);
+                }
+                @media screen and (min-width: $desktopsd_1280) {
+                }
+                @media screen and (min-width: $desktop_1440) {
+                }
+                @media screen and (min-width: $desktophd_1920) {
+                }
 
                 .card {
                     @include flex(column, start, nowrap, start);

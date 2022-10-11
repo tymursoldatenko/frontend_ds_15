@@ -52,23 +52,27 @@ let circle1 = document.getElementById('circle__circle');
 let galochka = document.getElementById('galochka');
 let galochka1 = document.getElementById('galochka__galochka');
 let dropdownmenu = document.getElementById('dropdownmenu');
+let group = document.getElementById('group');
 
 console.log('circle');
 console.log('circle__circle');
 console.log('galochka');
 console.log('galochka__galochka');
 console.log('dropdownmenu');
+console.log('group');
 
 circle.addEventListener('click', function() {
     if (dropdownmenu.style.display === "flex") {
         dropdownmenu.style.display = "none";
         circle1.style.stroke = "white";
         galochka1.style.stroke = "white";
+        group.style.marginTop = "747px";
     }
     else {
         dropdownmenu.style.display = "flex";
         circle1.style.stroke = "#F0145A";
         galochka1.style.stroke = "#F0145A";
+        group.style.marginTop = "60px";
     }
 });
 
@@ -77,10 +81,12 @@ galochka.addEventListener('click', function() {
         dropdownmenu.style.display = "none";
         circle1.style.stroke = "white";
         galochka1.style.stroke = "white";
+        group.style.marginTop = "747px";
     }
     else {
         dropdownmenu.style.display = "flex";
         circle1.style.stroke = "#F0145A";
         galochka1.style.stroke = "#F0145A";
+        group.style.marginTop = "60px";
     }
 });

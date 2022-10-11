@@ -1,74 +1,127 @@
 @import 'mixin';
 @import 'base';
 
+.background__picture {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+
+    .background__item {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        
+        .background__picture--special {
+            display: block;
+            position: relative;
+            top: 0;
+            @media screen and (min-width: $mobile_375) {
+                zoom: 0.75;
+            }
+            @media screen and (min-width: $tabletsd_768) {
+                zoom: 1.2816;
+            }
+            @media screen and (min-width: $tablet_1024) {
+                zoom: 0.9612;
+            }
+            @media screen and (min-width: $desktopsd_1280) {
+                zoom: 0.985;
+            }
+            @media screen and (min-width: $desktop_1440) {
+                zoom: 1;
+            }
+            @media screen and (min-width: $desktophd_1920) {
+                zoom: 1.25;
+            }
+        }
+        
+        .background__picture--pramery {
+            display: block;
+            position: relative;
+            height: 459px;
+            top: 340px;
+            @media screen and (min-width: $mobile_375) {
+                zoom: 0.75;
+                left: -155px;
+            }
+            @media screen and (min-width: $tabletsd_768) {
+                zoom: 1.2816;
+            }
+            @media screen and (min-width: $tablet_1024) {
+                zoom: 0.9612;
+            }
+            @media screen and (min-width: $desktopsd_1280) {
+                zoom: 0.985;
+            }
+            @media screen and (min-width: $desktop_1440) {
+                zoom: 1;
+            }
+            @media screen and (min-width: $desktophd_1920) {
+                zoom: 1.25;
+            }
+        }
+    }
+
+    .header__title {
+        @include gettextstyle(700, 38px, 46px, center, $colorBasic);
+        position: absolute;
+        @media screen and (min-width: $mobile_375) {
+            top: 226px;
+            width: 315px;
+        }
+        @media screen and (min-width: $tabletsd_768) {
+            top: 471.63px;
+            width: 800px;
+        }
+        @media screen and (min-width: $tablet_1024) {
+            top: 353.7px;
+        }
+        @media screen and (min-width: $desktopsd_1280) {
+            top: 362.48px;
+        }
+        @media screen and (min-width: $desktop_1440) {
+            top: 368px;
+        }
+        @media screen and (min-width: $desktophd_1920) {
+            top: 460px;
+        }
+    }
+
+    .button {
+        position: absolute;
+        width: 42px;
+        left: 45%;
+        bottom: 40px;
+
+        .button__circle {
+            position: absolute;
+        }
+            
+        .button__galochka {
+            width: 20px;
+            position: relative;
+            top: 15px;
+            left: 11px;
+        }
+
+        .button__circle svg:hover #circle__circle,
+        .button__circle svg:hover #galochka__galochka,
+        .button__galochka svg:hover #galochka__galochka,
+        .button__galochka svg:hover #circle__circle {
+            stroke: $colorActive;
+        } 
+    }
+}
 .header {
     background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
     border-radius: 0px 0px 12px 12px;
+    // padding: 0 60px;
 
-    @media screen and (min-width: $mobile) {
-        
-    }
-
-    @media screen and (min-width: $tabletsd) {
-        
-    }
-
-    @media screen and (min-width: $tablet) {
-        padding: 0 40px;
-    }
-
-    @media screen and (min-width: $desktopsd) {
-        
-    }
-
-    @media screen and (min-width: $desktop) {
-        
-    }
-
-    @media screen and (min-width: $desktophd) {
-        padding: 0 160px;
-    }
-    
-
-    .background__picture {
-        position: absolute;
-        
-        @media screen and (min-width: $mobile) {
-
-        }
-
-        @media screen and (min-width: $tabletsd) {
-
-        }
-
-        @media screen and (min-width: $tablet) {
-
-        }
-
-        @media screen and (min-width: $desktopsd) {
-
-        }
-
-        @media screen and (min-width: $desktop) {
-            zoom: 1;
-            padding: 0 0 0 24.5%;
-        }
-
-        @media screen and (min-width: $desktophd) {
-            zoom: 1.25;
-            padding: 0 0 0 285px;
-        }
-        
-        .background__picture--special {
-            position: relative;
-            top: 0;
-        }
-    
-        .background__picture--pramery {
-            position: relative;
-            left: -159px;
-        }
-    }
     
 
     .container {
@@ -78,37 +131,72 @@
             
             .header__top {
 
-                @media screen and (min-width: $desktophd) {
-                    padding: 50px 30px 0 0;
+                // @media screen and (min-width: $desktophd) {
+                //     padding: 50px 30px 0 0;
+                // }
+
+                // @media screen and (min-width: $desktop) and (max-width:1919.9px) {
+                //     padding: 50px 60px 0;
+                // }
+                @media screen and (min-width: $mobile_375) {
+                }
+                @media screen and (min-width: $tabletsd_768) {
+                }
+                @media screen and (min-width: $tablet_1024) {
+                }
+                @media screen and (min-width: $desktopsd_1280) {
+                }
+                @media screen and (min-width: $desktop_1440) {
+                padding: 50px 30px 0;
+                }
+                @media screen and (min-width: $desktophd_1920) {
                 }
 
-                @media screen and (min-width: $desktop) and (max-width:1919.9px) {
-                    padding: 50px 60px 0;
-                }
 
                 
                 @include flex(row, start, nowrap, flex-start);
                 
                 .logo {
+                    z-index: 1100;
                     @include flex(column, flex-start, nowrap, baseline);
+
+                    @media screen and (min-width: $tabletsd_768) {
+                       padding-top: 60px;
+                    }
+                    @media screen and (min-width: $tablet_1024) {
+                        padding-top: 0;
+                    }
                 }
                 
                 .nav {
                     position: absolute;
-
-                    @media screen and (min-width: $desktophd) {
-                        width: 83.2%;
-                    }
-
-                    @media screen and (min-width: $desktop) and (max-width:1919.9px) {
+                    
+                    @media screen and (min-width: $tabletsd_768) {
+                        width: auto;
+                     }
+                     @media screen and (min-width: $tablet_1024) {
                         width: 86.9%;
-        
-                    }
+                     }
+                     @media screen and (min-width: $desktop_1440) {
+                        width: 88%;
+                     }
+
                     
 
                     .nav__block{
                         @include flex(row, flex-end, nowrap, baseline);
-                        margin-bottom: 12px;
+                        
+                        @media screen and (min-width: $mobile_375) {
+                            margin-bottom: 22px;
+                            background: rgba(245, 245, 250, 0.2);
+                        }
+                        @media screen and (min-width: $tabletsd_768) {
+                            margin-bottom: 122px;
+                            background: none;
+                        }
+                        @media screen and (min-width: $tablet_1024) {
+                            margin-bottom: 12px;
+                        }
                         
 
                         .nav__item {
@@ -195,9 +283,17 @@
                     .menu {
                         font-size: 0;
                         @include flex(row,flex-end, nowrap, baseline);
+                        
+                        @media screen and (min-width: $tabletsd_768) {
+                            @include flex(row,flex-start, nowrap, baseline);
+                        }
+                        @media screen and (min-width: $tablet_1024) {
+                            @include flex(row,flex-end, nowrap, baseline);
+                        }
+                        
 
                         .menu__item {
-                            margin: 0 0 0 1.2%;
+                            margin: 0 0 0 15px;
 
                             &:hover {
                                 border-bottom: 2px solid $colorBasic;
@@ -210,6 +306,7 @@
                         }
 
                         .menu__item--active {
+                            margin: 0;
                             border-bottom: 2px solid $colorActive;
 
                             .menu__link--active {
@@ -220,68 +317,156 @@
                 }
             }
 
-            .header__title {
-                @include gettextstyle(700, 38px, 46px, center, $colorBasic);
-                position: absolute;
-                width: 800px;
+            // .header__title {
+            //     @include gettextstyle(700, 38px, 46px, center, $colorBasic);
+            //     position: absolute;
+            //     width: 800px;
 
-                @media screen and (min-width: $desktophd) {
-                    top: 472px;
-                    left: 550px;
-                }
-                // top: 377px;
-                // left: 360px;
-            }
+            //     @media screen and (min-width: $mobile) {
+            //         // zoom: 0.6;
+            //         // padding: 0 0 0 24.5%;
+            //     }
+        
+            //     @media screen and (min-width: $tabletsd) {
+            //         // zoom: 0.7;
+            //         // padding: 0 0 0 24.5%;
+            //     }
+        
+            //     @media screen and (min-width: $tablet) {
+            //         top: 245px;
+            //         left: 300px;
+            //     }
+        
+            //     @media screen and (min-width: $desktopsd) {
+            //         top: 245px;
+            //         left: 360px;
+            //     }
+        
+            //     @media screen and (min-width: $desktop) {
+            //         top: 377px;
+            //         left: 360px;
+            //     }
+        
+            //     @media screen and (min-width: $desktophd) {
+            //         top: 472px;
+            //         left: 550px;
+            //     }
+                
+            //     top: 377px;
+            //     left: 360px;
+            // }
 
-            .button {
+            // .button {
 
-                @media screen and (min-width: $desktophd) {
-                    margin: 812px auto 0;
-                }
-                // margin: 614px auto 0;
-                width: 42px;
+            //     @media screen and (min-width: $desktophd) {
+            //         margin: 812px auto 0;
+            //     }
+            //     margin: 614px auto 0;
+            //     width: 42px;
 
-                .button__circle {
-                    position: absolute;
-                }
+            //     .button__circle {
+            //         position: absolute;
+            //     }
                     
-                .button__galochka {
-                    width: 20px;
-                    position: relative;
-                    top: 15px;
-                    left: 11px;
-                }
+            //     .button__galochka {
+            //         width: 20px;
+            //         position: relative;
+            //         top: 15px;
+            //         left: 11px;
+            //     }
 
-                .button__circle svg:hover #circle__circle,
-                .button__circle svg:hover #galochka__galochka,
-                .button__galochka svg:hover #galochka__galochka,
-                .button__galochka svg:hover #circle__circle {
-                    stroke: $colorActive;
-                } 
-            }   
+            //     .button__circle svg:hover #circle__circle,
+            //     .button__circle svg:hover #galochka__galochka,
+            //     .button__galochka svg:hover #galochka__galochka,
+            //     .button__galochka svg:hover #circle__circle {
+            //         stroke: $colorActive;
+            //     } 
+            // }   
 
             .dropdownmenu {
-                margin-top: 120px;
+                @media screen and (min-width: $mobile_375) {
+                    flex-direction: column;
+                    padding: 0 30px;
+                }
+                @media screen and (min-width: $tabletsd_768) {
+                }
+                @media screen and (min-width: $tablet_1024) {
+                    flex-direction: row;
+                }
+                @media screen and (min-width: $desktopsd_1280) {
+                }
+                @media screen and (min-width: $desktop_1440) {
+                }
+                @media screen and (min-width: $desktophd_1920) {
+
+                }
+                
+
+                margin-top: 747px;
+
                 display: none;
-                flex-direction: row;
-                justify-content: flex-start;
+                justify-content: center;
                 flex-wrap: nowrap;
                 align-items: flex-start;
+                
 
                 .dropdownmenu__block {
-                    @media screen and (min-width: $desktophd) {
-                        margin-left: 3%;
+                    // @media screen and (min-width: $desktop) {
+                    //     width: 48%;
+                    // }
+                    // @media screen and (min-width: $desktophd) {
+                    //     margin-left: 3%;
+                    // }
+                    // margin-left: 12.2%;
+                    // padding-right: 4.1%;
+                    @media screen and (min-width: $mobile_375) {
+                        border-bottom:4px solid rgba(255, 255, 255, 0.3);
+                        width: auto;
+                        margin-left: 0;
+                        padding-right: 0;
                     }
-                    width: 32%;
-                    margin-left: 12.2%;
-                    padding-right: 4.1%;
-                    border-right:4px solid rgba(255, 255, 255, 0.3);
+                    @media screen and (min-width: $tabletsd_768) {
+                        border-bottom:4px solid rgba(255, 255, 255, 0.3);
+                    }
+                    @media screen and (min-width: $tablet_1024) {
+                        width: 32%;
+                        border-right:4px solid rgba(255, 255, 255, 0.3);
+                        border-bottom: none;
+                        // margin-left: 12.2%;
+                        // padding-right: 4.1%;
+                    }
+                    // @media screen and (min-width: $desktopsd_1280) {
+                    // }
+                    // @media screen and (min-width: $desktop_1440) {
+                    // }
+                    // @media screen and (min-width: $desktophd_1920) {
+                    // }
 
                     .dropdownmenu__list {
+                        @media screen and (min-width: $mobile_375) {
+                            @include flex(row,flex-start, nowrap, baseline);
+                            overflow: hidden;
+                            width: calc(100% - 60px);
+                        }
+                        @media screen and (min-width: $tabletsd_768) {
+                            @include flex(row,flex-start, nowrap, baseline);
+                        }
+                        @media screen and (min-width: $tablet_1024) {
+                            display: block;
+                        }
+                        // @media screen and (min-width: $desktopsd_1280) {
+                        //     top: 362.48px;
+                        // }
+                        // @media screen and (min-width: $desktop_1440) {
+                        //     top: 368px;
+                        // }
+                        // @media screen and (min-width: $desktophd_1920) {
+                        //     top: 460px;
+                        // }
                         
                         .dropdownmenu__name {
                             @include gettextstyle (700, 38px, 46px, right, #B3B3BA);
-                            margin: 30px 0;
+                            margin: 30px 10px;
 
                         }
 
@@ -292,13 +477,13 @@
                             background-clip: text;
                             margin: 10px  0 35px 0;
 
-                            @media screen and (min-width: $desktophd) {
-                                margin: 0;
-                            }
+                            // @media screen and (min-width: $desktophd) {
+                            //     margin: 0;
+                            // }
                         }
                         
                         .dropdownmenu__name--pramery {
-                            margin: 30px 0 10px 0;
+                            margin: 30px 10px 10px 0;
                         }
 
                         .dropdownmenu__name:hover {
@@ -309,23 +494,36 @@
                 }
 
                 .dropdownmenu__copy {
-                    width: 55%;
-                    margin-left: 4.1%;
+                    @media screen and (min-width: $mobile_375) {
+                        width: 100%;
+                    }
+                    @media screen and (min-width: $tabletsd_768) {
+                    }
+                    @media screen and (min-width: $tablet_1024) {
+                    }
+                    @media screen and (min-width: $desktopsd_1280) {
+                    }
+                    @media screen and (min-width: $desktop_1440) {
+                        width: 55%;
+                        margin-left: 4.1%;
+                    }
+                    @media screen and (min-width: $desktophd_1920) {
+                    }
 
                     .dropdownmenu__title {
                         @include gettextstyle(700, 30px, 37px,start, $colorBasic); 
 
-                        @media screen and (min-width: $desktophd) {
-                            margin: 60px 0 30px;
-                        }
+                        // @media screen and (min-width: $desktophd) {
+                        //     margin: 60px 0 30px;
+                        // }
                         margin: 43px 0 30px;
                     }
 
                     .dropdownmenu__text {
                         @include gettextstyle (400, 19px, 30px, start, $colorBasic);
-                        @media screen and (min-width: $desktophd) {
-                            width: auto;
-                        }
+                        // @media screen and (min-width: $desktophd) {
+                        //     width: auto;
+                        // }
                         width: 73.4%;
                     }
                 }
@@ -333,10 +531,12 @@
         }
             
         .group {
-            @media screen and (min-width: $desktophd) {
-                padding: 60px 0 0 0;
-            }
-            padding: 60px 0 0 4.1%;
+            margin-top: 747px;
+
+            // @media screen and (min-width: $desktophd) {
+            //     padding: 60px 0 0 0;
+            // }
+            padding: 60px 0 0 4%;
 
             .group__item {
                 margin-top: 60px;
@@ -349,9 +549,6 @@
                     .block {
                         @include flex(column, flex-start, nowrap, baseline);
                         margin-right: 60px;
-                        // @media screen and (min-width: $desktophd) {
-                        //     margin-right: 50px;
-                        // }
 
                         .block__baner {
                             width: 92px;
@@ -364,9 +561,12 @@
                         }
 
                         .block__copy {
-                            @media screen and (min-width: $desktophd) {
-                                width: 460px;
-                            }
+                            // @media screen and (min-width: $desktop) {
+                            //     width: 374px;
+                            // }
+                            // @media screen and (min-width: $desktophd) {
+                            //     width: 460px;
+                            // }
                             width: 400px;
 
                             .block__title {
@@ -379,41 +579,15 @@
                             }
                         }
                     }
-
                 }
-
-                
             }
         }
-    
     }
 
 }
 .background--special {
     
-    @media screen and (min-width: $mobile) {
-        
-    }
-
-    @media screen and (min-width: $tabletsd) {
-        
-    }
-
-    @media screen and (min-width: $tablet) {
-        
-    }
-
-    @media screen and (min-width: $desktopsd) {
-        
-    }
-
-    @media screen and (min-width: $desktop) {
-        width: 97.2%;
-    }
-
-    @media screen and (min-width: $desktophd) {
-        width: 98%;
-    }
+   width: calc(100% - 40px);
     
     margin: 0 auto;
     height: 10px;
@@ -421,33 +595,14 @@
     border-radius: 0px 0px 12px 12px;
 }
 .background--primary {
-
-    @media screen and (min-width: $mobile) {
-        
-    }
-
-    @media screen and (min-width: $tabletsd) {
-        
-    }
-
-    @media screen and (min-width: $tablet) {
-        
-    }
-
-    @media screen and (min-width: $desktopsd) {
-        width: 93.6%;
-    }
-
-    @media screen and (min-width: $desktop) {
-        width: 94.4%;
-    }
-
-    @media screen and (min-width: $desktophd) {
-        width: 95.2%;
-    }
+    width: calc(100% - 80px);
     margin: 0 auto;
     height: 10px;
     border-radius: 0px 0px 12px 12px;
     background: #CACADB;
 }
 
+
+// прошу прощения что не сделал этот проэкт по нормальному, просто мне уже тяжело на него смотреть(
+    // я хочу его сделать полнастью, после того как окончатильно выздоровлю,
+    //  я так большое спасибо за такой прекрасный курс)

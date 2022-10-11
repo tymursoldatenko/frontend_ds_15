@@ -1,12 +1,12 @@
 $colorActive: #F0145A;
 $colorBasic: #ffffff;
 $colorSecondary: #24A3FF;
-$desktophd: 1920px;
-$desktop: 1440px;
-$desktopsd: 1280px;
-$tablet: 1024px;
-$tabletsd: 768px;
-$mobile: 375px;
+$desktophd_1920: 1920px;
+$desktop_1440: 1440px;
+$desktopsd_1280: 1280px;
+$tablet_1024: 1024px;
+$tabletsd_768: 768px;
+$mobile_375: 375px;
 
 
 @mixin flex($fd, $jc, $wr, $ai) {

@@ -5,7 +5,20 @@
     .footer__container {
         border-top: 2px solid #E6E6F0;
         padding-top: 30px;
-        @include flex (row, space-between, nowrap, start);
+        @media screen and (min-width: $mobile_375) {
+            @include flex (column, center, nowrap, start);
+        }
+        @media screen and (min-width: $tabletsd_768) {
+        }
+        @media screen and (min-width: $tablet_1024) {
+            @include flex (row, space-between, nowrap, start);
+        }
+        @media screen and (min-width: $desktopsd_1280) {
+        }
+        @media screen and (min-width: $desktop_1440) {
+        }
+        @media screen and (min-width: $desktophd_1920) {
+        }
 
         .footer__contac {
             padding: 0 40px;
@@ -13,10 +26,24 @@
             .footer__item {
                 margin: 0 0 15px 0;
 
-                .footer__list {
+            .footer__list {
                     font-size: 0;
-                    @include flex (row, start, nowrap, center);
-
+                    // @include flex (row, start, nowrap, center);
+                    @media screen and (min-width: $mobile_375) {
+                        @include flex (column, start, nowrap, center);
+                    }
+                    @media screen and (min-width: $tabletsd_768) {
+                    }
+                    @media screen and (min-width: $tablet_1024) {
+                        @include flex (row, center, nowrap, center);
+                    }
+                    @media screen and (min-width: $desktopsd_1280) {
+                    }
+                    @media screen and (min-width: $desktop_1440) {
+                    }
+                    @media screen and (min-width: $desktophd_1920) {
+                    }
+    
                     .footer__name {
                         @include gettextstyle (400, 16px, 20px, start, #323264);
                     }
